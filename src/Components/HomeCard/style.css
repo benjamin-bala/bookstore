@@ -1,0 +1,53 @@
+.home-card {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  height: 30rem;
+  width: max-content;
+  font-size: 1.6rem;
+  width: max-content;
+  margin: 2rem;
+}
+.home-card__thumbnail {
+  display: flex;
+  justify-content: flex-end;
+}
+.home-card__thumbnail img {
+  height: 30rem;
+}
+.home-card__writeup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 3rem;
+  padding-right: 2rem;
+}
+.writeup__header {
+}
+.rating {
+  margin-top: 1.5rem;
+}
+.writeup__summary {
+  margin-top: 2rem;
+}
+.writeup__price {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.new-cost {
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+.old-cost {
+  text-decoration: line-through;
+  margin-left: 1rem;
+}
+.writeup__button {
+  text-align: center;
+  margin-top: 2.5rem;
+  background-color: #777;
+  padding: 1rem;
+  width: 20rem;
+  cursor: pointer;
+}

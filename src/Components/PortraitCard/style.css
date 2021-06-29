@@ -1,0 +1,41 @@
+.portrait-card {
+  margin: 2rem;
+  margin-left: 0;
+  margin-right: 4rem;
+  cursor: pointer;
+  transition: all 0.1s ease-in;
+}
+.portrait-card__thumbnail {
+  width: 20rem;
+  height: 30rem;
+}
+.portrait-card__backdrop {
+  background: rgba(0, 0, 0, 0.603);
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: #fff;
+}
+.portrait-card__backdrop > span {
+  display: flex;
+  align-items: center;
+  font-size: 1.8rem;
+  flex-direction: column;
+}
+.portrait-card:hover {
+  transform: scale(1.02);
+}
+.portrait-card:hover .portrait-card__backdrop {
+  display: flex;
+}
+.portrait-card__details {
+  font-size: 1.6rem;
+  margin-top: 2rem;
+}
+.cost {
+  margin-top: 2rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
