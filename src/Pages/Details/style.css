@@ -1,0 +1,6 @@
+.thumbnail-container {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  overflow-y: scroll;
+}

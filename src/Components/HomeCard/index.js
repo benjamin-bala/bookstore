@@ -29,9 +29,6 @@ export default function HomeCard() {
                     <p className="new-cost">$200.20</p>
                     <p className="old-cost">$240.20</p>
                 </div>
-                <div className="writeup__button">
-                    <span>Add to cart</span>
-                </div>
             </div>
         </div>
     )

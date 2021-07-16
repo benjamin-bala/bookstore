@@ -1,0 +1,64 @@
+.details-card {
+  font-size: 1.8rem;
+  margin: 2rem 0rem;
+}
+.details-card__thumbnail {
+  text-align: center;
+}
+.details-card__thumbnail img {
+  width: 30rem;
+}
+.details-card__summary,
+.details-card__price {
+  margin: 2.5rem 0;
+}
+.details-card__price {
+  font-size: 2.6rem;
+}
+.old-cost {
+  text-decoration: line-through;
+  font-size: 1.5rem;
+}
+.details-card__footer {
+  display: flex;
+  align-items: center;
+}
+.add-order {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  border: 1px solid #eaeaea;
+  width: max-content;
+  margin: 2rem 0rem;
+  border-radius: 0.8rem;
+}
+.add-order span {
+  padding: 1rem 2rem;
+  cursor: default;
+}
+.add-order .increment,
+.add-order .decrement {
+  font-weight: 600;
+  font-size: 2.4rem;
+  cursor: pointer;
+  background-color: #e7e2e2;
+  transition: all 0.2ms ease-in;
+}
+.add-order .increment:active,
+.add-order .decrement:active {
+  transform: scale(0.95);
+}
+.add-btn {
+  margin-right: 2rem;
+  background-color: orange;
+  color: #fff;
+}
+
+@media (min-width: 768px) {
+  .details-card {
+    display: flex;
+  }
+  .details-card__summary {
+    margin-left: 3rem;
+  }
+}

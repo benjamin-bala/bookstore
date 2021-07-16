@@ -1,0 +1,6 @@
+.showcase__card {
+  display: flex;
+}
+.showcase__card-thumbnail img {
+  width: 20rem;
+}
