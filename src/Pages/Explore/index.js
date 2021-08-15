@@ -17,7 +17,7 @@ export default function Explore() {
     })
 
     const getBooks = () => {
-        axios.get('http://localhost:8001/products', {
+        axios.get('https://hivebookstore.herokuapp.com/products', {
             headers: {'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json; charset=utf-8'}
         })
         .then(response => {

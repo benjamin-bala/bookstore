@@ -18,7 +18,7 @@ export default function Details() {
     })
 
     const getSelectedBook = () => {
-        axios.get(`http://localhost:8001/products/productid/?id=${id}`)
+        axios.get(`https://hivebookstore.herokuapp.com/products/productid/?id=${id}`)
         .then(response => {
             setTimeout(() => {
                 setSelectedBook(response.data)
