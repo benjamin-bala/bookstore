@@ -11,9 +11,8 @@ export default function Home() {
                 <h1>with us, you can shop online & help save your high street at the same time</h1>
             </section>
             <section className="home-card-container scroll-right">
-                <HomeCard />
-                <HomeCard />
-                <HomeCard />
+              
+            
             </section>
             <section className="book-category scroll-right screen-1040">
                 <h2 className="category-name">Science</h2>

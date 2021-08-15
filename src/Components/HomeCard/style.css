@@ -1,5 +1,7 @@
 .home-card {
   display: flex;
+  text-decoration: none;
+  color: #222;
   height: auto;
   font-size: 1.6rem;
   margin: 2rem;

@@ -1,18 +1,19 @@
 import './style.css'
 import {BsStarFill} from 'react-icons/bs'
+import {Link} from 'react-router-dom'
 
-export default function HomeCard() {
+export default function HomeCard({book}) {
     return (
-        <div className="home-card">
+        <Link to={`/details/${book._id}`} className="home-card">
             <div className="home-card__thumbnail"> 
                 <img 
-                    src="https://edit.org/images/cat/book-covers-big-2019101610.jpg" 
-                    alt=""
+                    src={book.image}
+                    alt={book.title}
                 />
             </div>
             <div className="home-card__writeup">
                 <div className="writeup__header">
-                    <h2>The Nani Fashion Issue</h2>
+                    <h2>{book.title}</h2>
                     <p>by: G space X Evans</p>
                     <div className="rating">
                         <BsStarFill size={20} />
@@ -23,13 +24,12 @@ export default function HomeCard() {
                     </div>
                 </div>
                  <div className="writeup__summary">
-                    <p>On the other hand, we denounce with righteous indignation and ...</p>
+                    <p>{book.description}</p>
                 </div>
                 <div className="writeup__price">
-                    <p className="new-cost">$200.20</p>
-                    <p className="old-cost">$240.20</p>
+                    <p className="new-cost">&#8358;{book.price}</p>
                 </div>
             </div>
-        </div>
+        </Link>
     )
 }

@@ -1,18 +1,18 @@
 import {BsTrash} from 'react-icons/bs'
 import './style.css'
 
-export default function CartItem() {
+export default function CartItem({item}) {
     return (
         <div className="cart-item">
             <div className="cart-item__thumbnail">
                 <img 
-                    src="https://upload.wikimedia.org/wikipedia/commons/7/7a/The_Great_Gatsby_Cover_1925_Retouched.jpg" 
+                    src={item.image}
                     alt=""
                 />
             </div>
             <div className="cart-item__summary">
                 <div className="cart-item__summary-header">
-                    <p>Some name</p>
+                    <p>{item.title}</p>
                     <span>
                         <BsTrash size={20} />
                     </span>
@@ -20,10 +20,7 @@ export default function CartItem() {
 
                 <div className="'cart-item__summary-footer">
                     <div>
-                        <p >x2</p>
-                    </div>
-                    <div>
-                        <h5>$120.00</h5>
+                        <h5>&#8358;{item.price}</h5>
                     </div>
                 </div>
             </div>

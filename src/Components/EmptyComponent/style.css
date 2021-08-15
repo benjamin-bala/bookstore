@@ -1,0 +1,58 @@
+.empty-card {
+  /* background-color: #777; */
+  height: 30rem;
+  padding: 2rem;
+  display: flex;
+}
+.empty-card__thumbnail {
+  background: #eaeaea;
+  height: auto;
+  width: 20rem;
+  animation: lazyload 0.8s infinite ease-in;
+}
+.empty-card__writeup {
+  width: 100%;
+  margin-left: 3rem;
+}
+.empty-card__header {
+  background-color: #eaeaea;
+  height: 5rem;
+  animation: lazyload 0.8s infinite ease-in;
+}
+.empty-card__summary {
+  background-color: #eaeaea;
+  height: 10rem;
+  margin-top: 2rem;
+  animation: lazyload 0.8s infinite ease-in;
+}
+.empty-card__price {
+  background-color: #eaeaea;
+  height: 6rem;
+  width: 15rem;
+  margin-top: 2rem;
+  animation: lazyload 0.8s infinite ease-in;
+}
+
+@keyframes lazyload {
+  0% {
+    background: linear-gradient(
+      to right bottom,
+      #f1efef,
+      rgba(235, 231, 231, 0.925)
+    );
+  }
+  50% {
+    background: linear-gradient(
+      to left bottom,
+      #f1efef,
+      rgba(235, 231, 231, 0.925)
+    );
+  }
+  100% {
+    background: linear-gradient(
+      to right bottom,
+      #f1efef,
+      rgba(235, 231, 231, 0.925)
+    );
+  }
+}

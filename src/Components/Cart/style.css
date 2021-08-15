@@ -1,9 +1,9 @@
 .cart {
   width: 35rem;
-  background-color: #fafafa;
   height: 100%;
   padding: 1rem;
   overflow-y: scroll;
+  font-size: 1.8rem;
 }
 .cart__header {
   display: flex;
@@ -15,9 +15,9 @@
   padding: 1.4rem 2rem;
 }
 .cart__body {
-  height: 40rem;
+  /* height: 40rem; */
   margin: 6rem 0rem;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
 }
 
 .cart__footer-item {
@@ -51,4 +51,9 @@
   text-align: center;
   justify-content: center;
   align-items: center;
+}
+@media (max-width: 768px) {
+  .cart {
+    width: 100%;
+  }
 }

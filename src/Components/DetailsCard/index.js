@@ -1,40 +1,68 @@
 import './style.css'
+import { useDispatch } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import {actionCreators} from '../../state/index'
+import { useState } from 'react'
+import AddToBag from '../Alert/AddToBag'
+import { useHistory } from 'react-router-dom'
 
-export default function DetailsCard() {
+export default function DetailsCard({book}) {
+    const dispatch = useDispatch()
+    const { addCartItem } = bindActionCreators(actionCreators, dispatch)
+    const [count, setCount] = useState(1)
+
+    const increment = () => count >= 0 ? setCount(count + 1) : null
+    const decrement = () => count > 1 ? setCount(count - 1) : null
+    let history = useHistory()
+
+    const addItem = () => {
+        let msg = document.querySelector(".add-to-bag");
+
+        msg.style.display = 'flex'
+        setTimeout(() => {
+            msg.style.display = "none"
+        }, 1000);
+
+        addCartItem({...book, quantity: 1})
+    }
+
     return (
         <div className="details-card">
             <div className="details-card__thumbnail">
                 <img 
-                    src="https://edit.org/images/cat/book-covers-big-2019101610.jpg" 
-                    alt=""
+                    src={book.image}
+                    alt={book.title}
                 />
             </div>
             <div className="details-card__summary">
                 <div className="details-card__header">
-                    <h2>The Book of eli</h2>
-                    <p>
-                        This is a random book message just to fill space.
-                        This is a random book message just to fill space.
-                        This is a random book message just to fill space.
-                        This is a random book message just to fill space.
-                        This is a random book message just to fill space.
-                    </p>
+                    <h2>{book.title} ~ {book.type}</h2>
+                    <p>{book.description}</p>
                     <div className="details-card__price">
-                        <h4>$200.00</h4>
-                        <p className="old-cost">$120.00</p>
+                        <h4>&#8358;{book.price}</h4>
                     </div>
-                    <div className="add-order">
-                        <span className="decrement">-</span>
-                        <span className="order-display">2</span>
-                        <span className="increment">+</span>
-                    </div>
+                    {
+                        book.type !== "pdf" ?
+                        <div className="add-order">
+                            <span className="decrement" onClick={decrement}>-</span>
+                            <span className="order-display">{count}</span>
+                            <span className="increment" onClick={increment}>+</span>
+                        </div>
+                        :
+                        null
+
+                    }
                 </div>
 
                 <div className="details-card__footer">
-                    <div className="add-btn btn">Add to Bag</div>
-                    <div className="buy-btn btn">Buy now</div>
+                    <div className="add-btn btn" onClick={addItem}>Add to Bag</div>
+                    <div className="buy-btn btn" onClick={()=>history.push('/checkout') }>Buy now</div>
                 </div>
+
+                <AddToBag />
             </div>
         </div>
     )
 }
+
+

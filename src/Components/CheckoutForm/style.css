@@ -1,0 +1,42 @@
+.checkout-form {
+  font-size: 1.6rem;
+}
+.process {
+  margin: 1.5rem 0;
+}
+.form-text {
+  color: #777;
+  font-size: 1.4rem;
+}
+.form-input {
+  margin-top: 1rem;
+}
+.form-input input {
+  display: block;
+  width: 100%;
+  margin: 0.5rem 0;
+  padding: 1rem;
+  border: 1px solid #eaeaea;
+  background: none;
+  outline: none;
+  border-radius: 0.6rem;
+}
+.form-input input:focus {
+  border: 1.5px solid #777;
+}
+.form-input input[type="button"] {
+  border: none;
+  width: 20rem;
+  margin-top: 1rem;
+  font-weight: 600;
+  background-color: #eaeaea;
+}
+.form-input input[type="radio"] {
+  display: inline;
+  width: max-content;
+  margin-right: 1rem;
+}
+.form-input label {
+  display: flex;
+  align-items: center;
+}
