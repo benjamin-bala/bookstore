@@ -11,6 +11,7 @@ import { BiError } from 'react-icons/bi'
 export default function Details() {
     let { id } = useParams()
     const [selectedBook, setSelectedBook] = useState({})
+    const [relatedBook, setRelatedBook] = useState([])
     const [value] = useState(0)
     const [loading, setLoading] = useState({
         state: true,
@@ -32,9 +33,22 @@ export default function Details() {
         })
     }
 
+    const getRelatedBook = () => {
+        axios.get(`https://hivebookstore.herokuapp.com/products`)
+        .then(response => {
+            setTimeout(() => {
+                setRelatedBook(response.data)
+            }, 500);
+        })
+        .catch(()=> {
+
+        })
+    }
+
     useEffect(()=> {
         getSelectedBook()
-    }, [value])
+        getRelatedBook()
+    }, [id])
 
     const getBookId = () => {
         getSelectedBook()
@@ -57,12 +71,11 @@ export default function Details() {
                     <section className="screen-1040">
                         <h2>Related Books</h2>
                         <section className="thumbnail-container">
-                            <Thumbnail />
-                            <Thumbnail />
-                            <Thumbnail />
-                            <Thumbnail />
-                            <Thumbnail />
-                            <Thumbnail />
+                            {
+                                relatedBook.slice(0,5).map(thumbnail => {
+                                    return <Thumbnail key={thumbnail._id} thumbnail={thumbnail}/>
+                                })
+                            }
                         </section>
                     </section>
                 </div>

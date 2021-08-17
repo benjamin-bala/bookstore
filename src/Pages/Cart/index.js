@@ -22,9 +22,9 @@ export default function Checkout() {
         <div className="cart-page">
             <Header />
              <section className="cart-main screen-1040">
-                <div className="cart-container">
+                
                     <Cart total={total} subTotal={subTotal} tax={tax} cart={cart}/>
-                </div>
+                
             </section>
         </div>
     )

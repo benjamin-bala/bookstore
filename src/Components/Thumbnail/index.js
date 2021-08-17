@@ -1,10 +1,15 @@
+import { Link, useHistory } from 'react-router-dom'
 import './style.css'
 
-export default function Thumbnail() {
+export default function Thumbnail({thumbnail}) {
+
+    let history = useHistory()
     return (
-        <div className="thumbnail">
+        <div onClick={()=> {
+            history.push(`/details/${thumbnail._id}`)
+        }}  className="thumbnail">
             <img 
-                src="https://upload.wikimedia.org/wikipedia/commons/7/7a/The_Great_Gatsby_Cover_1925_Retouched.jpg" 
+                src={thumbnail.image}
                 alt=""
             />
         </div>

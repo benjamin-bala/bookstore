@@ -39,7 +39,7 @@ export default function DetailsCard({book}) {
                     <h2>{book.title} ~ {book.type}</h2>
                     <p>{book.description}</p>
                     <div className="details-card__price">
-                        <h4>&#8358;{book.price}</h4>
+                        <h4>&#8358;{book.price.toFixed(2)}</h4>
                     </div>
                     {
                         book.type !== "pdf" ?

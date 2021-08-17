@@ -107,7 +107,7 @@ export default function CheckoutForm({total}) {
 
                     if(response.status === "successful"){
                         setTimeout(() => {
-                            history.push("/")
+                            history.push("/success")
                         }, 1000);
                     }
                     console.log(response);

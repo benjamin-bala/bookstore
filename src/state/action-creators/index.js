@@ -6,3 +6,12 @@ export const addCartItem = (book) => {
         })
     }
 }
+
+export const deleteItem = (bookId) => {
+    return dispatch => {
+        dispatch({
+            type: "deleteItem",
+            payload: bookId
+        })
+    }
+}

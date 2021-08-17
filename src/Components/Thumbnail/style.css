@@ -1,7 +1,9 @@
 .thumbnail {
   display: flex;
   margin-right: 2.6rem;
+  cursor: pointer;
 }
 .thumbnail img {
   width: 12rem;
+  border-radius: 0.6rem;
 }

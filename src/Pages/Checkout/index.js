@@ -7,8 +7,6 @@ import { useSelector } from 'react-redux'
 export default function Checkout() {
 
     const cart = useSelector((state) => state.addToCart)
-    console.log(cart);
-
      let subTotal = 0
 
     const itemPrice = cart.length > 0 ?

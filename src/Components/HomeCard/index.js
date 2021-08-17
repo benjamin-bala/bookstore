@@ -14,20 +14,13 @@ export default function HomeCard({book}) {
             <div className="home-card__writeup">
                 <div className="writeup__header">
                     <h2>{book.title}</h2>
-                    <p>by: G space X Evans</p>
-                    <div className="rating">
-                        <BsStarFill size={20} />
-                        <BsStarFill size={20} />
-                        <BsStarFill size={20} />
-                        <BsStarFill size={20} />
-                        <BsStarFill size={20} />
-                    </div>
+                    
                 </div>
                  <div className="writeup__summary">
                     <p>{book.description}</p>
                 </div>
                 <div className="writeup__price">
-                    <p className="new-cost">&#8358;{book.price}</p>
+                    <p className="new-cost">&#8358;{book.price.toFixed(2)}</p>
                 </div>
             </div>
         </Link>
