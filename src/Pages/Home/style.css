@@ -1,13 +1,21 @@
 .home-hero {
   font-size: 2.4rem;
   text-transform: capitalize;
-  height: 30rem;
+  height: 60rem;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   padding: 4rem;
   text-align: center;
+  background: url("../../assets/images/hero-bg.png");
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+.home-hero h1 {
+  width: 60rem;
+  /* color: #fff; */
+  margin: 2rem 0;
 }
 .scroll-right {
   display: flex;
@@ -25,4 +33,17 @@
   letter-spacing: 1rem;
   color: rgba(119, 119, 119, 0.199);
   transform: translate(-50%, -50%);
+}
+
+@supports (-webkit-text-stroke: 3px #eaeaea) {
+  .category-name {
+    -webkit-text-stroke: 3px #eaeaea;
+    -webkit-text-fill-color: white;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-hero h1 {
+    width: 100%;
+  }
 }

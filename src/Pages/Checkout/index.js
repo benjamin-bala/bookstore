@@ -22,7 +22,7 @@ export default function Checkout() {
             <Header />
              <section className="checkout-main screen-1040">
                 <div>
-                    <CheckoutForm total={total}/>
+                    <CheckoutForm total={total} cartLength={cart.length}/>
                 </div>
                 <div className="cart-container">
                     <Cart total={total} subTotal={subTotal} tax={tax} cart={cart}/>

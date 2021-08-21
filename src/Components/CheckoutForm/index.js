@@ -3,7 +3,7 @@ import { useFlutterwave, FlutterWaveButton } from 'react-flutterwave'
 import { useState } from 'react'
 import { useHistory } from 'react-router'
 
-export default function CheckoutForm({total}) {
+export default function CheckoutForm({total,cartLength}) {
 
     const [userinfo, setUserInfo] = useState({
         email: '',
@@ -149,17 +149,23 @@ export default function CheckoutForm({total}) {
                 </div>
             </div>
 
-            <div className="process">
-                <h2>Payment</h2>
-                <p className="form-text">Select your payment method</p>
-                <div className="form-input">
-                    <label htmlFor="payment">
-                        <input type="radio" readOnly name="payment-method" checked />
-                        <p>Card payment</p>
-                    </label>
-                    <input type="button" onClick={checkOut} className="btn btn-form" value="Place Order" name="place-order" />
-                </div>
-            </div>
+              {
+                cartLength >= 1 ?
+
+                    <div className="process">
+                        <h2>Payment</h2>
+                        <p className="form-text">Select your payment method</p>
+                        <div className="form-input">
+                            <label htmlFor="payment">
+                                <input type="radio" readOnly name="payment-method" checked />
+                                <p>Card payment</p>
+                            </label>
+                        
+                                <input type="button" onClick={checkOut} className="btn btn-form" value="Place Order" name="place-order" />
+                        </div>
+                    </div>
+                :null
+            }
         </div>
     )
 }

@@ -1,6 +1,7 @@
 import './style.css'
 import CartItem from '../CartItem'
 import {FiShoppingBag} from 'react-icons/fi'
+import { Link } from 'react-router-dom'
 
 export default function Cart({tax,total,subTotal,cart}) {
   
@@ -11,6 +12,11 @@ export default function Cart({tax,total,subTotal,cart}) {
             <div className="empty">
                 <FiShoppingBag size={50} />
                 <p>Your shopping bag is empty, try adding items</p>
+
+                <div style={{marginTop: '2.6rem'}}>
+                    <Link to='/explore' className="btn" style={{color: '#333'}}>Explore</Link>
+                </div>
+
             </div>  
             :
             <div className="cart">

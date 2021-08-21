@@ -33,6 +33,20 @@
   animation: lazyload 0.8s infinite ease-in;
 }
 
+/* empty cardsm syle */
+.empty-cardsm {
+  display: flex;
+  flex-direction: column;
+}
+.empty-cardsm__thumbnail {
+  height: 30rem;
+  width: 20rem;
+  margin-right: 2rem;
+  margin-top: 2.7rem;
+  border-radius: 0.7rem;
+  animation: lazyload 0.8s infinite ease-in;
+}
+
 @keyframes lazyload {
   0% {
     background: linear-gradient(

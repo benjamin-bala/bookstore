@@ -1,5 +1,5 @@
 import './style.css'
-import { useDispatch } from 'react-redux'
+import { useDispatch,useSelector } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import {actionCreators} from '../../state/index'
 import { useState } from 'react'
@@ -10,6 +10,7 @@ export default function DetailsCard({book}) {
     const dispatch = useDispatch()
     const { addCartItem } = bindActionCreators(actionCreators, dispatch)
     const [count, setCount] = useState(1)
+    const cart = useSelector((state) => state.addToCart)
 
     const increment = () => count >= 0 ? setCount(count + 1) : null
     const decrement = () => count > 1 ? setCount(count - 1) : null
@@ -56,7 +57,10 @@ export default function DetailsCard({book}) {
 
                 <div className="details-card__footer">
                     <div className="add-btn btn" onClick={addItem}>Add to Bag</div>
-                    <div className="buy-btn btn" onClick={()=>history.push('/checkout') }>Buy now</div>
+                    {
+                        cart.length >= 1 ?
+                            <div className="buy-btn btn" onClick={()=>history.push('/checkout') }>Buy now</div> : null
+                    }
                 </div>
 
                 <AddToBag />

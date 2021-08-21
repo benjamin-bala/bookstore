@@ -9,6 +9,7 @@
   display: none;
   flex-direction: column;
   align-items: flex-end;
+  font-size: 1.8rem;
 }
 
 .navbar-container nav {
@@ -42,6 +43,7 @@
 }
 .book-category__list {
   margin-top: 1rem;
+  text-transform: capitalize;
 }
 .book-category__list p {
   padding: 0.6rem 0;

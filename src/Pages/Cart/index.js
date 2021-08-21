@@ -2,6 +2,8 @@ import './style.css'
 import Header from '../../Components/Header'
 import Cart from '../../Components/Cart'
 import { useSelector } from 'react-redux'
+import { Link } from 'react-router-dom'
+import { BiShoppingBag } from 'react-icons/bi'
 
 export default function Checkout() {
 
@@ -24,7 +26,17 @@ export default function Checkout() {
              <section className="cart-main screen-1040">
                 
                     <Cart total={total} subTotal={subTotal} tax={tax} cart={cart}/>
-                
+                    <div style={{marginTop: '2rem'}}>
+                    
+                        {
+                            cart.length >= 1 ?
+                            <Link to='/checkout' className="btn checkout-btn">
+                                <BiShoppingBag size={20} />
+                                Checkout
+                            </Link>
+                            : null
+                        }
+                    </div>
             </section>
         </div>
     )

@@ -1,6 +1,7 @@
 .cart-item {
   display: flex;
   justify-content: space-between;
+  margin: 2rem 0;
 }
 .cart-item__thumbnail img {
   width: 10rem;
