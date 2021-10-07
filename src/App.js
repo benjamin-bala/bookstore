@@ -6,6 +6,7 @@ import Explore from './Pages/Explore'
 import Checkout from './Pages/Checkout'
 import Cart from './Pages/Cart'
 import Categories from './Pages/Categories';
+import Success from './Pages/success';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path='/details/:id' component={Details} />
         <Route path='/cart' component={Cart} />
         <Route path='/checkout' component={Checkout} />
+        <Route path='/success' component={Success} />
     </Switch>
   );
 }

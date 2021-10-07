@@ -1,0 +1,25 @@
+.success {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  flex-direction: column;
+  font-size: 2rem;
+}
+.success h1 {
+  font-size: 2.6rem;
+}
+
+.download-links {
+  width: 550px;
+  margin-top: 3rem;
+}
+.download-links p {
+  margin: 1rem 0;
+}
+
+@media (max-width: 768px) {
+  .download-links {
+    width: auto;
+  }
+}

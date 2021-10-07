@@ -1,8 +1,12 @@
 import React from 'react'
-import {BiCart} from 'react-icons/bi'
+import { useHistory } from 'react-router'
 import './style.css'
 
+
 export default function PortraitCard({ item }) {
+
+    const history = useHistory()
+
     return (
         <div className="portrait-card">
             <div className="portrait-card__thumbnail"
@@ -14,10 +18,9 @@ export default function PortraitCard({ item }) {
                 borderRadius: '0.7rem'
             }}
             >
-                <div className="portrait-card__backdrop">
+                <div onClick={() => history.push(`/details/${item._id}`)} className="portrait-card__backdrop">
                     <span>
-                        <BiCart size={20} />
-                        Add to cart
+                       View book
                     </span>
                 </div>
             </div>

@@ -1,5 +1,5 @@
 import './style.css'
-import { BiCart,IoBagCheckOutline,IoChevronBack} from 'react-icons/all'
+import { BiCart,IoChevronBack} from 'react-icons/all'
 import NavBar from '../NavBar'
 import { useSelector } from 'react-redux'
 import { Link, useRouteMatch,useHistory } from 'react-router-dom'
@@ -22,7 +22,7 @@ export default function Header() {
                 <div className="header-main">
                     <div className="logo">
                         <Link to='/'>
-                            <h2>Hive</h2>
+                            <h2>CU Bookstore</h2>
                         </Link>
                     </div>
                     <div className="header-link">

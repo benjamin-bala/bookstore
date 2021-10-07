@@ -28,7 +28,7 @@ export default function CheckoutForm({total,cartLength}) {
             name: userinfo.fullname,
         },
          customizations: {
-            title: "Hive store",
+            title: "CU Bookstore",
             description: "Payment for items in cart",
             logo: "https://assets.piedpiper.com/logo.png",
         },

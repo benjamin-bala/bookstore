@@ -5,6 +5,7 @@ import Header from "../../Components/Header"
 import { categories } from "./categories"
 import axios from 'axios'
 import { BiError } from 'react-icons/bi'
+import HomeCard from "../../Components/HomeCard"
 
 export default function Categories() {
     
@@ -32,6 +33,8 @@ export default function Categories() {
         })
     }
 
+    console.log("book item", books);
+
     useEffect(() => {
         getBooks()
     }, [value])
@@ -43,15 +46,11 @@ export default function Categories() {
             <main>
             {
                 !loading.state && !loading.error ? 
-                categories.map(item => {
+                books.map(item => {
                     return(
-                        <section key={item.id} className="book-category scroll-right screen-1040">
-                            <h2 className="category-name">{item.name}</h2>
-                            <Cardsm />
-                            <Cardsm />
-                            <Cardsm />
-                            <Cardsm />
-                            <Cardsm />
+                        <section key={item._id} className="book-category scroll-right screen-1040">
+                            <h2 className="category-name">{item.category}</h2>
+                            <HomeCard key={item._id} book={item} />
                         </section>
                     )
                 })
